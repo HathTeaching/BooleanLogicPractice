@@ -188,6 +188,30 @@ function problem26_ans(x: boolean, y: boolean, z: boolean): boolean {
     return false;
 }
 
+function problem27(a: boolean, b: boolean, c: boolean, d: boolean): boolean {
+    return !(!(a || d) && !(!b || c));
+}
+
+function problem27_ans(a: boolean, b: boolean, c: boolean, d: boolean): boolean {
+    return false;
+}
+
+function problem28(a: boolean, b: boolean, c: boolean, d: boolean): boolean {
+    return !((a && b && !c) || (!c && d));
+}
+
+function problem28_ans(a: boolean, b: boolean, c: boolean, d: boolean): boolean {
+    return false;
+}
+
+function problem29(a: boolean, b: boolean, c: boolean, d: boolean): boolean {
+    return !(!a || d) && !(b || !c) && !(!c || d);
+}
+
+function problem29_ans(a: boolean, b: boolean, c: boolean, d: boolean): boolean {
+    return false;
+}
+
 let problems = [
     problem1,
     problem2,
@@ -214,7 +238,10 @@ let problems = [
     problem23,
     problem24,
     problem25,
-    problem26
+    problem26,
+    problem27,
+    problem28,
+    problem29
 ]
 
 let problem_ans = [
@@ -243,7 +270,10 @@ let problem_ans = [
     problem23_ans,
     problem24_ans,
     problem25_ans,
-    problem26_ans
+    problem26_ans,
+    problem27_ans,
+    problem28_ans,
+    problem29_ans
 ]
 
 function * generateAllBooleanInputs(fn: Function): Generator<boolean[]> {
